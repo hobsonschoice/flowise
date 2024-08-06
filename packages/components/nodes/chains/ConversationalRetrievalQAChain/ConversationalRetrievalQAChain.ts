@@ -310,7 +310,7 @@ const createRetrieverChain = (llm: BaseLanguageModel, retriever: Runnable, rephr
 }
 
 const formatDocs = (docs: Document[]) => {
-    return docs.map((doc, i) => `<doc id='${i}'>${doc.pageContent}</doc>`).join('\n')
+    return docs.map((doc, i) => `<doc id='${i}' foo='bar'>${doc.pageContent}</doc>`).join('\n')
 }
 
 const formatChatHistoryAsString = (history: BaseMessage[]) => {
